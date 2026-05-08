@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spell Quest 🌿</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+  <div class="stars" id="stars"></div>
+
+  <div class="wrapper">
+    <div class="header">
+      <h1>🌿 Spell Quest</h1>
+      <p>Choose the correct spelling!</p>
+    </div>
+
+    <div class="quiz-section" id="quizSection">
+      <div class="scorebar">
+        <div class="item"><span class="label">Question</span><span class="value" id="qNum">1/10</span></div>
+        <div class="item"><span class="label">✅ Correct</span><span class="value correct" id="scoreCorrect">0</span></div>
+        <div class="item"><span class="label">❌ Wrong</span><span class="value wrong" id="scoreWrong">0</span></div>
+      </div>
+
+      <div class="progress-track">
+        <div class="progress-fill" id="progressFill" style="width:0%"></div>
+      </div>
+
+      <div class="card" id="card">
+        <div class="question-num" id="questionNum">Question 1 of 10</div>
+        <div class="question-text">Sahi spelling chuniye:</div>
+        <div class="word-hint" id="wordHint">_ _ _ _ _</div>
+        <div class="options" id="optionsGrid"></div>
+        <div class="feedback" id="feedback">
+          <span class="icon" id="feedbackIcon"></span>
+          <span id="feedbackText"></span>
+        </div>
+        <button class="next-btn" id="nextBtn" onclick="nextQuestion()">Agla Sawaal →</button>
+      </div>
+    </div>
+
+    <div class="result" id="resultSection">
+      <div class="trophy" id="trophy">🏆</div>
+      <h2 id="resultTitle">Shabash!</h2>
+      <div class="final-score"><span id="finalCorrect">0</span> / <span>10</span></div>
+      <p id="resultMsg">Great spelling skills!</p>
+      <button class="restart-btn" onclick="restartQuiz()">🔄 Phir Khelein</button>
+    </div>
+  </div>
+
+  <script src="assets/words.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
